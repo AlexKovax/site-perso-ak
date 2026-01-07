@@ -1,9 +1,69 @@
+import { useState } from 'react'
 import { useSEO } from '../hooks/useSEO'
 import Section from '../components/Section'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import LatestContent from '../components/LatestContent'
+import { IconPodcast, IconTwitch, IconYouTube, IconBook } from '../components/icons'
 import styles from './Contenus.module.css'
+
+const NEWSLETTER_WEBHOOK = 'https://hosakkastudio.app.n8n.cloud/webhook/add-newsletter'
+
+function NewsletterForm() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle') // idle, loading, success, error
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if (!email) return
+
+    setStatus('loading')
+    try {
+      const response = await fetch(NEWSLETTER_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+      const data = await response.json()
+      if (data.success) {
+        setStatus('success')
+        setEmail('')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <p className={styles.successMessage}>
+        Merci ! Vous êtes inscrit à la newsletter.
+      </p>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className={styles.newsletterForm}>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="votre@email.com"
+        required
+        className={styles.emailInput}
+        disabled={status === 'loading'}
+      />
+      <Button type="submit" size="sm" disabled={status === 'loading'}>
+        {status === 'loading' ? 'Envoi...' : "S'inscrire"}
+      </Button>
+      {status === 'error' && (
+        <p className={styles.errorMessage}>Une erreur est survenue. Réessayez.</p>
+      )}
+    </form>
+  )
+}
 
 function Contenus() {
   useSEO({
@@ -28,13 +88,29 @@ function Contenus() {
         <LatestContent />
       </Section>
 
+      {/* Newsletter */}
+      <Section>
+        <div className={styles.newsletterSection}>
+          <div className={styles.newsletterContent}>
+            <h2 className={styles.newsletterTitle}>Restez informé</h2>
+            <p className={styles.newsletterText}>
+              Recevez ma veille hebdomadaire sur le no-code et l'IA, ainsi que les coulisses de mes projets.
+            </p>
+          </div>
+          <NewsletterForm />
+        </div>
+      </Section>
+
       {/* Canaux */}
-      <Section title="Mes canaux">
+      <Section title="Mes canaux" variant="alt">
         <div className={styles.channelsGrid}>
           {/* Podcast */}
           <Card className={styles.channelCard}>
             <Card.Body>
-              <h3 className={styles.channelTitle}>Podcast</h3>
+              <h3 className={styles.channelTitle}>
+                <IconPodcast size={24} className={styles.channelIcon} />
+                Podcast
+              </h3>
               <p className={styles.channelText}>
                 Mon format principal. Des notes vocales où je commente l'actualité du no-code et de l'IA, des interviews de praticiens, et des émissions régulières comme "AI Game" avec Lucien Tavano ou "Radio Vibe Code" avec Xavier Coiffard. Un format audio pour ceux qui préfèrent écouter en marchant ou en travaillant.
               </p>
@@ -47,7 +123,10 @@ function Contenus() {
           {/* Twitch */}
           <Card className={styles.channelCard}>
             <Card.Body>
-              <h3 className={styles.channelTitle}>Lives Twitch</h3>
+              <h3 className={styles.channelTitle}>
+                <IconTwitch size={24} className={styles.channelIcon} />
+                Lives Twitch
+              </h3>
               <p className={styles.channelText}>
                 Chaque mardi matin à 8h30, je commente l'actualité no-code et IA en direct sur la chaîne No Code France. C'est aussi l'occasion de coder en live, de tester des outils et d'échanger avec la communauté. Le format le plus spontané et interactif.
               </p>
@@ -60,7 +139,10 @@ function Contenus() {
           {/* YouTube */}
           <Card className={styles.channelCard}>
             <Card.Body>
-              <h3 className={styles.channelTitle}>YouTube</h3>
+              <h3 className={styles.channelTitle}>
+                <IconYouTube size={24} className={styles.channelIcon} />
+                YouTube
+              </h3>
               <p className={styles.channelText}>
                 Les replays de mes lives, des tutoriels et parfois des vidéos plus travaillées. Un bon point d'entrée si vous préférez le format vidéo et que vous avez raté les directs.
               </p>
@@ -73,22 +155,19 @@ function Contenus() {
           {/* Articles */}
           <Card className={styles.channelCard}>
             <Card.Body>
-              <h3 className={styles.channelTitle}>Articles et newsletter</h3>
+              <h3 className={styles.channelTitle}>
+                <IconBook size={24} className={styles.channelIcon} />
+                Articles
+              </h3>
               <p className={styles.channelText}>
-                Pour ceux qui préfèrent lire. Des réflexions plus longues sur le no-code, le vibe coding et la démocratisation de la tech. Et une newsletter où je partage les coulisses de mes projets et ma veille de la semaine.
+                Pour ceux qui préfèrent lire. Des réflexions plus longues sur le no-code, le vibe coding et la démocratisation de la tech.
               </p>
-              <div className={styles.buttonGroup}>
-                <Button href="https://newsletter.hosakka.studio/" size="sm">
-                  Newsletter
-                </Button>
-                <Button
-                  href="https://www.linkedin.com/in/alexiskovalenko/recent-activity/articles/"
-                  size="sm"
-                  variant="secondary"
-                >
-                  Articles
-                </Button>
-              </div>
+              <Button
+                href="https://www.linkedin.com/in/alexiskovalenko/recent-activity/articles/"
+                size="sm"
+              >
+                Lire les articles
+              </Button>
             </Card.Body>
           </Card>
         </div>

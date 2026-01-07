@@ -15,6 +15,12 @@
   box-shadow: 6px 6px 0 var(--color-border);
 }
 
+.primary:hover,
+.secondary:hover,
+.outline:hover {
+  color: var(--color-text);
+}
+
 .button:active {
   transform: translate(2px, 2px);
   box-shadow: none;
@@ -61,11 +67,12 @@
   font-size: var(--text-lg);
 }
 
-/* Arrow animation */
-.arrow {
+/* Icon animation */
+.icon {
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
-.button:hover .arrow {
+.button:hover .icon {
   transform: translateX(4px);
 }

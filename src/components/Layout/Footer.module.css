@@ -1,16 +1,21 @@
 .footer {
   background-color: var(--color-text);
   color: var(--color-bg);
-  padding: var(--space-12) 0;
+  padding: var(--space-6) 0;
   border-top: var(--border-brutal-thick);
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: var(--space-6);
-  text-align: center;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
 }
 
 .contactLabel {
@@ -18,15 +23,12 @@
   font-size: var(--text-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 var(--space-2) 0;
   opacity: 0.7;
 }
 
 .links {
   display: flex;
-  gap: var(--space-8);
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: var(--space-6);
 }
 
 .links a {
@@ -67,8 +69,19 @@
 }
 
 @media (max-width: 768px) {
-  .links {
+  .container {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-4);
   }
 }

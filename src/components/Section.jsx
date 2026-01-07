@@ -4,6 +4,7 @@ function Section({
   children,
   title,
   subtitle,
+  icon: Icon,
   className = '',
   variant = 'default',
   ...props
@@ -15,7 +16,12 @@ function Section({
       <div className="container">
         {(title || subtitle) && (
           <div className={styles.header}>
-            {title && <h2 className={styles.title}>{title}</h2>}
+            {title && (
+              <h2 className={styles.title}>
+                {Icon && <Icon size={28} className={styles.icon} />}
+                {title}
+              </h2>
+            )}
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
         )}

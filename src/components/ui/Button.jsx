@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { IconArrow, IconExternalLink } from '../icons'
 import styles from './Button.module.css'
 
 function Button({
@@ -23,7 +24,7 @@ function Button({
         {...props}
       >
         {children}
-        <span className={styles.arrow}>→</span>
+        <IconExternalLink className={styles.icon} />
       </a>
     )
   }
@@ -33,7 +34,7 @@ function Button({
     return (
       <Link to={to} className={classNames} {...props}>
         {children}
-        <span className={styles.arrow}>→</span>
+        <IconArrow className={styles.icon} />
       </Link>
     )
   }

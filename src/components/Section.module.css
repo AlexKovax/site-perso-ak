@@ -1,0 +1,47 @@
+.section {
+  padding: var(--space-16) 0;
+}
+
+/* Variants */
+.default {
+  /* Default styles above */
+}
+
+.alt {
+  background-color: var(--color-bg-alt);
+}
+
+.dark {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.dark .title {
+  color: var(--color-bg);
+}
+
+/* Header */
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.dark .subtitle {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}

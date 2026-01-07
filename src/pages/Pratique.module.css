@@ -1,0 +1,33 @@
+.intro {
+  max-width: 700px;
+}
+
+.introText {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.philosophyContent {
+  max-width: 700px;
+}
+
+.philosophyContent p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+.philosophyContent p:last-child {
+  margin-bottom: 0;
+}
+
+.projectCard {
+  max-width: 700px;
+}
+
+.projectText {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}

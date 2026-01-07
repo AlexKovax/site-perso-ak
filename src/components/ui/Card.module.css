@@ -1,0 +1,49 @@
+.card {
+  background-color: var(--color-white);
+  border: var(--border-brutal);
+  box-shadow: var(--shadow-brutal);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Variants */
+.default {
+  /* Default styles above */
+}
+
+.highlight {
+  background-color: var(--color-accent);
+}
+
+.subtle {
+  background-color: var(--color-bg-alt);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.interactive:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-border);
+}
+
+.interactive:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Card parts */
+.header {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: var(--border-brutal);
+}
+
+.body {
+  padding: var(--space-6);
+}
+
+.footer {
+  padding: var(--space-4) var(--space-6);
+  border-top: var(--border-brutal);
+}

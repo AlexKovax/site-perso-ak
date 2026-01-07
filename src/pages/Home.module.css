@@ -1,0 +1,61 @@
+.sectionContent {
+  max-width: 700px;
+}
+
+.text {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.textLight {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+  color: var(--color-bg);
+  opacity: 0.9;
+}
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.contactLinks {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.contactLink {
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+  padding: var(--space-3) var(--space-6);
+  border: 2px solid var(--color-bg);
+  transition: all var(--transition-fast);
+}
+
+.contactLink:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border-color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .booksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactLinks {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .contactLink {
+    text-align: center;
+  }
+}

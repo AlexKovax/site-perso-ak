@@ -1,0 +1,54 @@
+.intro {
+  max-width: 700px;
+}
+
+.introText {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.projectCard {
+  height: 100%;
+}
+
+.projectTitle {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+
+.projectText {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.projectLink {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-accent-secondary);
+  text-decoration: none;
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+  color: var(--color-accent-secondary);
+}
+
+.contournementCard {
+  max-width: 700px;
+}
+
+.contournementText {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}

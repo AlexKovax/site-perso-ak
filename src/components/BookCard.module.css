@@ -2,14 +2,44 @@
   height: 100%;
 }
 
+.cardHorizontal {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.coverWrapper {
+  padding: var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.cover {
+  width: 120px;
+  height: auto;
+  border: var(--border-brutal);
+  box-shadow: 3px 3px 0 var(--color-text);
+}
+
 .title {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-3);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
 }
 
 .description {
   color: var(--color-text-muted);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
   font-size: var(--text-sm);
-  line-height: 1.6;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .cardHorizontal {
+    flex-direction: column;
+  }
+
+  .coverWrapper {
+    justify-content: center;
+  }
 }

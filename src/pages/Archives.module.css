@@ -47,8 +47,34 @@
   max-width: 700px;
 }
 
+.contournementContent {
+  display: flex;
+  align-items: center;
+}
+
+.contournementLogoWrapper {
+  flex-shrink: 0;
+  padding: var(--space-5);
+}
+
+.contournementLogo {
+  width: 140px;
+  height: auto;
+}
+
 .contournementText {
   font-size: var(--text-lg);
   line-height: 1.7;
   margin-bottom: var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .contournementContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contournementLogoWrapper {
+    padding: var(--space-4) var(--space-4) 0;
+  }
 }

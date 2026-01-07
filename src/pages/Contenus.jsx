@@ -3,6 +3,7 @@ import { useSEO } from '../hooks/useSEO'
 import Section from '../components/Section'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
+import BookCard from '../components/BookCard'
 import LatestContent from '../components/LatestContent'
 import { IconPodcast, IconTwitch, IconYouTube, IconBook } from '../components/icons'
 import styles from './Contenus.module.css'
@@ -170,6 +171,28 @@ function Contenus() {
               </Button>
             </Card.Body>
           </Card>
+        </div>
+      </Section>
+
+      {/* Livres */}
+      <Section title="Livres">
+        <p className={styles.booksIntro}>
+          J'ai écrit deux livres sur le no-code. Le premier en 2023 avec Florian Reins et Erwan Kezzar chez Eyrolles. Le second en solo en 2025, un abécédaire personnel du mouvement no-code.
+        </p>
+        <div className={styles.booksGrid}>
+          <BookCard
+            title="L'abécédaire du mouvement no-code"
+            description="26 lettres, 26 mots-clés pour comprendre le mouvement no-code à travers mon regard et mon expérience."
+            link="https://abc.no-code.org/"
+            cover="/livre2.png"
+            featured
+          />
+          <BookCard
+            title="No-Code, une nouvelle génération d'outils numériques"
+            description="Co-écrit avec Florian Reins et Erwan Kezzar, publié chez Eyrolles en 2023."
+            link="https://www.editions-eyrolles.com/livre/no-code"
+            cover="/livre.webp"
+          />
         </div>
       </Section>
     </>

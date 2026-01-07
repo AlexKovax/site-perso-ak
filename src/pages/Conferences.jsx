@@ -23,42 +23,63 @@ function Conferences() {
         </div>
       </Section>
 
-      {/* Disponibilité */}
-      <Section variant="alt">
-        <Card variant="highlight" className={styles.inviteCard}>
-          <Card.Body>
-            <h2 className={styles.inviteTitle}>M'inviter</h2>
-            <p className={styles.inviteText}>
-              Je suis disponible pour intervenir dans vos événements, meetups ou conférences d'entreprise. Mes sujets de prédilection : le no-code, le vibe coding, la démocratisation de la création numérique.
-            </p>
-            <Button href="mailto:alex@hosakka.studio" variant="secondary">
-              Me contacter
-            </Button>
-          </Card.Body>
-        </Card>
-      </Section>
-
       {/* Conférence actuelle */}
-      <Section title="Ma conférence actuelle">
+      <Section title="Ma conférence actuelle" variant="alt">
         <Card className={styles.currentTalk}>
-          <Card.Body>
-            <h3 className={styles.talkTitle}>Vibe Coding et Pop Art</h3>
-            <p className={styles.talkText}>
-              Ma conférence la plus récente explore le parallèle entre l'émergence du vibe coding et le mouvement Pop Art des années 60. Comment l'IA démocratise la création de code, comme Warhol a démocratisé l'art. Une réflexion sur ce que signifie "créer" à l'ère de l'IA.
-            </p>
-            <Button
-              href="https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit"
-              size="sm"
-            >
-              Voir les slides
-            </Button>
-          </Card.Body>
+          <div className={styles.talkContent}>
+            <Card.Body>
+              <h3 className={styles.talkTitle}>Vibe Coding et Pop Art</h3>
+              <p className={styles.talkText}>
+                Ma conférence la plus récente explore le parallèle entre l'émergence du vibe coding et le mouvement Pop Art des années 60. Comment l'IA démocratise la création de code, comme Warhol a démocratisé l'art. Une réflexion sur ce que signifie "créer" à l'ère de l'IA.
+              </p>
+              <Button
+                href="https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit"
+                size="sm"
+              >
+                Voir les slides
+              </Button>
+            </Card.Body>
+            <div className={styles.talkImageWrapper}>
+              <img
+                src="/slides.png"
+                alt="Slide de présentation : De Warhol à Basquiat"
+                className={styles.talkImage}
+              />
+            </div>
+          </div>
         </Card>
       </Section>
 
       {/* Historique */}
-      <Section title="Historique" variant="alt">
+      <Section title="Historique des replays">
+        <p className={styles.historyIntro}>
+          Voici les conférences dont un replay est disponible. Mais je suis intervenu dans bien d'autres événements, meetups et podcasts...
+        </p>
         <ConferenceTable />
+      </Section>
+
+      {/* Disponibilité */}
+      <Section variant="alt">
+        <Card variant="highlight" className={styles.inviteCard}>
+          <div className={styles.inviteContent}>
+            <Card.Body>
+              <h2 className={styles.inviteTitle}>M'inviter</h2>
+              <p className={styles.inviteText}>
+                Je suis disponible pour intervenir dans vos événements, meetups ou conférences d'entreprise. Mes sujets de prédilection : le no-code, le vibe coding, la démocratisation de la création numérique.
+              </p>
+              <Button href="mailto:alex@hosakka.studio" variant="secondary">
+                Me contacter
+              </Button>
+            </Card.Body>
+            <div className={styles.inviteImageWrapper}>
+              <img
+                src="/invitation.jpg"
+                alt="Alexis Kovalenko sur scène au Web2Day"
+                className={styles.inviteImage}
+              />
+            </div>
+          </div>
+        </Card>
       </Section>
     </>
   )

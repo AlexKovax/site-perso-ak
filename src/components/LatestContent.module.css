@@ -8,6 +8,75 @@
   height: 100%;
 }
 
+.cardBody {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+
+.playButton {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  background: var(--color-bg-alt);
+  border: var(--border-brutal);
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.playButton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-text);
+}
+
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  transition: background var(--transition-fast);
+}
+
+.playButton:hover .playOverlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.playIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-accent);
+  border: var(--border-brutal);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  box-shadow: var(--shadow-brutal);
+  transition: transform var(--transition-fast);
+}
+
+.playButton:hover .playIcon {
+  transform: scale(1.1);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
 .label {
   display: inline-block;
   font-family: var(--font-mono);
@@ -15,48 +84,126 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-text-muted);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
-.contentLink {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+.labelDuration {
+  text-transform: none;
+  letter-spacing: normal;
 }
 
-.contentLink:hover {
-  color: inherit;
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
 }
 
-.contentLink:hover .title {
-  color: var(--color-accent-secondary);
+.overlayContent {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
 }
 
-.thumbnail {
+.closeButton {
+  position: absolute;
+  top: calc(-1 * var(--space-12));
+  right: 0;
+  background: var(--color-accent);
+  border: var(--border-brutal);
+  width: 48px;
+  height: 48px;
+  font-size: var(--text-xl);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-brutal);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.closeButton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-bg);
+}
+
+.overlayEmbed {
   width: 100%;
   aspect-ratio: 16 / 9;
+  border: var(--border-brutal);
+  overflow: hidden;
+  background: #000;
+}
+
+.overlayIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.overlayPlayer {
+  background: var(--color-bg);
+  border: var(--border-brutal);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.overlayPodcastImage {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
   object-fit: cover;
   border: var(--border-brutal);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.overlayTitle {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-6);
+}
+
+.overlayAudio {
+  width: 100%;
+  max-width: 500px;
 }
 
 .title {
-  font-size: var(--text-lg);
-  margin-bottom: 0;
-  transition: color var(--transition-fast);
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  line-height: 1.3;
+}
+
+.duration {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.links {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
 }
 
 .skeleton {
   background-color: var(--color-bg-alt);
   border: var(--border-brutal);
-  padding: var(--space-8);
+  padding: var(--space-6);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  min-height: 200px;
+  min-height: 120px;
 }
 
 .error {
@@ -66,8 +213,20 @@
   font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardBody {
+    flex-direction: column;
+  }
+
+  .playButton {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }

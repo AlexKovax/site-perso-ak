@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const API_URL = 'https://files.hosakka.studio/api/content.php'
+const API_URL = 'https://files.hosakka.studio/api/contenu.php'
 
 export function useLatestContent() {
   const [data, setData] = useState(null)

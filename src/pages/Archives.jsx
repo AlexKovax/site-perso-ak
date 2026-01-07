@@ -21,8 +21,27 @@ function Archives() {
         </div>
       </Section>
 
+      {/* Contournement */}
+      <Section title="Contournement" variant="alt">
+        <Card className={styles.contournementCard}>
+          <Card.Body>
+            <p className={styles.contournementText}>
+              J'ai co-fondé Contournement en 2019, un organisme de formation spécialisé dans les outils no-code. Je ne suis plus opérationnel mais je reste associé et je continue à suivre l'aventure.
+            </p>
+            <a
+              href="https://contournement.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.projectLink}
+            >
+              contournement.io →
+            </a>
+          </Card.Body>
+        </Card>
+      </Section>
+
       {/* Communauté No-Code France */}
-      <Section title="Communauté No-Code France" variant="alt">
+      <Section title="Communauté No-Code France">
         <div className={styles.projectsGrid}>
           <Card className={styles.projectCard}>
             <Card.Body>
@@ -136,25 +155,6 @@ function Archives() {
             </Card.Body>
           </Card>
         </div>
-      </Section>
-
-      {/* Contournement */}
-      <Section title="Contournement">
-        <Card className={styles.contournementCard}>
-          <Card.Body>
-            <p className={styles.contournementText}>
-              J'ai co-fondé Contournement en 2019, un organisme de formation spécialisé dans les outils no-code. Je ne suis plus opérationnel mais je reste associé et je continue à suivre l'aventure.
-            </p>
-            <a
-              href="https://contournement.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.projectLink}
-            >
-              contournement.io →
-            </a>
-          </Card.Body>
-        </Card>
       </Section>
     </>
   )

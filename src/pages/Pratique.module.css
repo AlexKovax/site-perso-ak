@@ -31,3 +31,11 @@
   line-height: 1.7;
   margin-bottom: var(--space-6);
 }
+
+.projectTextMuted {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  font-style: italic;
+}

@@ -6,7 +6,7 @@ import styles from './Archives.module.css'
 function Archives() {
   useSEO({
     title: 'Archives',
-    description: 'Mes projets passés et présents : No Code France, podcasts, projets personnels et Contournement.'
+    description: 'Mes projets passés et présents : No Code France, podcasts et projets personnels.'
   })
 
   return (
@@ -21,36 +21,8 @@ function Archives() {
         </div>
       </Section>
 
-      {/* Contournement */}
-      <Section title="Contournement" variant="alt">
-        <Card className={styles.contournementCard}>
-          <div className={styles.contournementContent}>
-            <div className={styles.contournementLogoWrapper}>
-              <img
-                src="/logocontournement.png"
-                alt="Logo Contournement"
-                className={styles.contournementLogo}
-              />
-            </div>
-            <Card.Body>
-              <p className={styles.contournementText}>
-                J'ai co-fondé Contournement en 2019, un organisme de formation spécialisé dans les outils no-code. Je ne suis plus opérationnel mais je reste associé et à être impliqué dans cette aventure passionnante.
-              </p>
-              <a
-                href="https://contournement.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.projectLink}
-              >
-                contournement.io →
-              </a>
-            </Card.Body>
-          </div>
-        </Card>
-      </Section>
-
       {/* Communauté No-Code France */}
-      <Section title="Ecosystème no-code">
+      <Section title="Ecosystème no-code" variant="alt">
         <div className={styles.projectsGrid}>
           <Card className={styles.projectCard}>
             <Card.Body>

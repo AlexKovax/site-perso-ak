@@ -106,16 +106,29 @@ function Pratique() {
 
       {/* Vibe Coding */}
       <Section title="Vibe Coding" icon={IconSparkles}>
-        <Card className={styles.projectCard}>
-          <Card.Body>
-            <p className={styles.projectText}>
-              Le vibe coding, c'est créer des applications en dialoguant avec l'IA. Une nouvelle façon de programmer qui prolonge naturellement le mouvement no-code. Je documente mes explorations, je teste les outils et je partage des ressources pour ceux qui veulent s'y mettre.
-            </p>
-            <Button href="https://vibe-coding.tech">
-              Découvrir le vibe coding
-            </Button>
-          </Card.Body>
-        </Card>
+        <div className={styles.cardsGrid}>
+          <Card className={styles.projectCard}>
+            <Card.Body>
+              <p className={styles.projectText}>
+                Le vibe coding, c'est créer des applications en dialoguant avec l'IA. Une nouvelle façon de programmer qui prolonge naturellement le mouvement no-code. Je documente mes explorations, je teste les outils et je partage des ressources pour ceux qui veulent s'y mettre.
+              </p>
+              <Button href="https://vibe-coding.tech">
+                Découvrir le vibe coding
+              </Button>
+            </Card.Body>
+          </Card>
+
+          <Card className={styles.projectCard}>
+            <Card.Body>
+              <p className={styles.projectText}>
+                Pour bien vibe coder, maîtriser Git et GitHub est essentiel. C'est ce qui permet de versionner son code, de collaborer efficacement et de déployer ses projets. J'ai créé une formation complète pour apprendre ces outils fondamentaux.
+              </p>
+              <Button href="https://formation-git.fr" variant="secondary">
+                Apprendre Git et GitHub
+              </Button>
+            </Card.Body>
+          </Card>
+        </div>
       </Section>
     </>
   )

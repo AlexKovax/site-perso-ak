@@ -5,6 +5,7 @@ import Contenus from './pages/Contenus'
 import Conferences from './pages/Conferences'
 import Pratique from './pages/Pratique'
 import Archives from './pages/Archives'
+import Mentions from './pages/Mentions'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/conferences" element={<Conferences />} />
         <Route path="/pratique" element={<Pratique />} />
         <Route path="/archives" element={<Archives />} />
+        <Route path="/mentions" element={<Mentions />} />
       </Routes>
     </Layout>
   )

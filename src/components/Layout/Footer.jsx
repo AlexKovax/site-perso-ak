@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { IconSlack, IconLinkedIn, IconMail } from '../icons'
 import styles from './Footer.module.css'
 
@@ -32,9 +33,14 @@ function Footer() {
           </a>
           </div>
         </div>
-        <p className={styles.copyright}>
-          {currentYear} Alexis Kovalenko
-        </p>
+        <div className={styles.legal}>
+          <p className={styles.copyright}>
+            {currentYear} Alexis Kovalenko
+          </p>
+          <Link to="/mentions" className={styles.legalLink}>
+            Mentions légales
+          </Link>
+        </div>
       </div>
     </footer>
   )

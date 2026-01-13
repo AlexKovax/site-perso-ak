@@ -62,10 +62,27 @@
   color: var(--color-bg);
 }
 
+.legal {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 .copyright {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   margin: 0;
+}
+
+.legalLink {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.legalLink:hover {
+  color: var(--color-bg);
 }
 
 @media (max-width: 768px) {
@@ -83,5 +100,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--space-4);
+  }
+
+  .legal {
+    flex-direction: column;
+    gap: var(--space-2);
   }
 }

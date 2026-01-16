@@ -6,7 +6,7 @@ URL: https://alexis-kovalenko.fr/llms.txt
 
 ## Description
 
-Portfolio et site personnel d'Alexis Kovalenko (@alexkovax), présentant ses contenus, conférences et pratiques autour du no-code, du vibe coding et de la création numérique. Le site est construit comme une Single Page Application (SPA) avec React 18 et Vite.
+Portfolio et site personnel d'Alexis Kovalenko (@alexkovax), présentant ses contenus, conférences et pratiques autour du no-code, du vibe coding et de la création numérique.
 
 ## Pages principales
 
@@ -16,80 +16,25 @@ Portfolio et site personnel d'Alexis Kovalenko (@alexkovax), présentant ses con
 - **Pratique** (/pratique) : Services et accompagnement
 - **Archives** (/archives) : Anciens contenus
 
-## Stack technique
+## Design
 
-- **Frontend** : React 18.3.1
-- **Routing** : React Router DOM 6.28.0
-- **Build tool** : Vite 6.0.0
-- **Styling** : CSS Modules avec CSS custom properties
-- **Deployment** : Netlify
-- **Analytics** : Umami
+**Esthétique** : Brutalist design avec bordures épaisses et ombres portées
 
-## Design system
-
-**Esthétique** : Brutalist design avec bordures épaisses (2-3px) et ombres portées
-
-**Couleurs principales** :
+**Couleurs** :
 - Background : cream (#FAFAFA)
 - Accent : yellow (#FFE600)
 - Secondary : blue (#0066FF)
 - Text : dark (#1A1A1A)
 
 **Typographie** :
-- Headings : Space Grotesk (500-700)
-- Body : Inter (400-700)
-- Code : JetBrains Mono (400-500)
+- Headings : Space Grotesk
+- Body : Inter
+- Code : JetBrains Mono
 
-## Architecture du code
-
-```
-src/
-├── pages/          # Composants de pages (Home, Contenus, Conferences, Pratique, Archives)
-├── components/     # Composants réutilisables
-│   ├── Layout/    # Header et Footer
-│   └── ui/        # Primitives UI (Button, Card, Badge, etc.)
-├── hooks/         # Custom hooks (useSEO, useLatestContent)
-├── data/          # Données statiques (liste des conférences)
-├── styles/        # CSS global et variables
-└── main.jsx       # Point d'entrée
-```
-
-## API externe
-
-Le site récupère du contenu dynamique depuis :
-- **Endpoint** : https://files.hosakka.studio/api/content.php
-- **Usage** : Hook personnalisé `useLatestContent` pour fetcher les derniers contenus
-
-## Commandes de développement
-
-```bash
-npm run dev      # Serveur de développement sur http://localhost:5173
-npm run build    # Build de production dans dist/
-npm run preview  # Preview du build de production
-```
-
-## Documentation du projet
-
-- `/CLAUDE.md` : Guide pour Claude Code avec overview du projet
-- `/DESIGN_SYSTEM.md` : Documentation complète du système de design
-- `/netlify.toml` : Configuration de déploiement Netlify
-
-## Contact et réseaux
+## Contact
 
 - **Site** : https://alexis-kovalenko.fr
 - **Twitter** : @alexkovax
-
-## Instructions pour les LLMs
-
-Lorsque vous travaillez sur ce projet :
-
-1. **Style de code** : Suivre les conventions React avec hooks et composants fonctionnels
-2. **Styling** : Utiliser CSS Modules et les custom properties définies dans `src/styles/variables.css`
-3. **Design** : Respecter l'esthétique brutalist avec bordures épaisses et couleurs définies
-4. **Routing** : Utiliser React Router DOM pour la navigation
-5. **Performance** : Le site est une SPA client-side, optimiser pour le chargement initial
-6. **Accessibilité** : Maintenir la sémantique HTML et les bonnes pratiques a11y
-7. **Pas de tests** : Aucun framework de test n'est configuré dans ce projet
 
 ## Dernière mise à jour
 

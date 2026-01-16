@@ -1,0 +1,41 @@
+# Alexis Kovalenko
+
+> Site personnel d'Alexis Kovalenko - Créateur de contenu, conférencier et praticien du no-code et du vibe coding
+
+URL: https://alexis-kovalenko.fr/llms.txt
+
+## Description
+
+Portfolio et site personnel d'Alexis Kovalenko (@alexkovax), présentant ses contenus, conférences et pratiques autour du no-code, du vibe coding et de la création numérique.
+
+## Pages principales
+
+- **Accueil** (/) : Présentation et introduction
+- **Contenus** (/contenus) : Articles, vidéos et créations
+- **Conférences** (/conferences) : Liste des talks et interventions
+- **Pratique** (/pratique) : Services et accompagnement
+- **Archives** (/archives) : Anciens contenus
+
+## Design
+
+**Esthétique** : Brutalist design avec bordures épaisses et ombres portées
+
+**Couleurs** :
+- Background : cream (#FAFAFA)
+- Accent : yellow (#FFE600)
+- Secondary : blue (#0066FF)
+- Text : dark (#1A1A1A)
+
+**Typographie** :
+- Headings : Space Grotesk
+- Body : Inter
+- Code : JetBrains Mono
+
+## Contact
+
+- **Site** : https://alexis-kovalenko.fr
+- **Twitter** : @alexkovax
+
+## Dernière mise à jour
+
+2026-01-16

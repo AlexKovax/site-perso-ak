@@ -57,7 +57,7 @@ function NewsletterPopup() {
     <div className={`${styles.popup} ${isExpanded ? styles.expanded : styles.collapsed}`}>
       <div className={styles.header}>
         <button onClick={toggleExpanded} className={styles.toggleButton} aria-label={isExpanded ? 'Réduire' : 'Développer'}>
-          {isExpanded ? '−' : '+'}
+          {isExpanded ? '−' : '✉'}
         </button>
         <button onClick={handleClose} className={styles.closeButton} aria-label="Fermer">
           ×
@@ -68,7 +68,7 @@ function NewsletterPopup() {
         <div className={styles.content}>
           <h3 className={styles.title}>Newsletter</h3>
           <p className={styles.text}>
-            Recevez ma veille hebdomadaire sur le no-code et l'IA
+            Soyez prévenu.e de mes nouveaux contenus
           </p>
 
           {status === 'success' ? (

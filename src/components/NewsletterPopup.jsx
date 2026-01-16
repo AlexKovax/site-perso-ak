@@ -20,6 +20,17 @@ function NewsletterPopup() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Fermer la popup 2 secondes après une inscription réussie
+  useEffect(() => {
+    if (status === 'success') {
+      const timer = setTimeout(() => {
+        setIsVisible(false)
+      }, 2000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [status])
+
   async function handleSubmit(e) {
     e.preventDefault()
     if (!email) return

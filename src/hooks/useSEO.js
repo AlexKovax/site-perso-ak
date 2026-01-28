@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const BASE_URL = 'https://alexis-kovalenko.fr'
+const BASE_URL = 'https://www.alexiskovalenko.fr'
 const DEFAULT_TITLE = 'Alexis Kovalenko'
 const DEFAULT_DESCRIPTION = 'Créateur de contenu, conférencier et praticien du no-code et du vibe coding. Je crée du contenu, j\'écris et j\'accompagne ceux qui veulent créer des solutions numériques.'
 

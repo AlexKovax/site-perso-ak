@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alexis-kovalenko.fr/sitemap.xml
+Sitemap: https://www.alexiskovalenko.fr/sitemap.xml

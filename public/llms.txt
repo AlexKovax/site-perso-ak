@@ -2,7 +2,7 @@
 
 > Site personnel d'Alexis Kovalenko - Créateur de contenu, conférencier et praticien du no-code et du vibe coding
 
-URL: https://alexis-kovalenko.fr/llms.txt
+URL: https://www.alexiskovalenko.fr/llms.txt
 
 ## Description
 
@@ -33,7 +33,7 @@ Portfolio et site personnel d'Alexis Kovalenko (@alexkovax), présentant ses con
 
 ## Contact
 
-- **Site** : https://alexis-kovalenko.fr
+- **Site** : https://www.alexiskovalenko.fr
 - **Twitter** : @alexkovax
 
 ## Dernière mise à jour

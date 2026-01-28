@@ -35,8 +35,8 @@ Un design system minimaliste avec une esthétique brutaliste. Pensé pour être 
   --color-border: #000000;       /* Bordures (toujours noir) */
 
   /* Accent - À PERSONNALISER */
-  --color-accent: #FFE600;           /* Couleur d'accent principale */
-  --color-accent-hover: #E6CF00;     /* Accent au survol (10% plus sombre) */
+  --color-accent: #9B59FF;           /* Couleur d'accent principale */
+  --color-accent-hover: #8347E6;     /* Accent au survol (10% plus sombre) */
   --color-accent-secondary: #0066FF; /* Couleur secondaire (liens, focus) */
 }
 ```
@@ -45,7 +45,7 @@ Un design system minimaliste avec une esthétique brutaliste. Pensé pour être 
 
 | Projet | Accent | Accent hover | Secondary |
 |--------|--------|--------------|-----------|
-| Original (jaune) | `#FFE600` | `#E6CF00` | `#0066FF` |
+| Original (violet) | `#9B59FF` | `#8347E6` | `#0066FF` |
 | Corail | `#FF6B6B` | `#E65A5A` | `#4ECDC4` |
 | Vert menthe | `#00D9A5` | `#00C294` | `#7C4DFF` |
 | Orange | `#FF9500` | `#E68600` | `#007AFF` |
@@ -270,8 +270,8 @@ Pour implémenter un mode sombre, remplacer les variables de couleur :
     --color-white: #2D2D2D;
 
     /* L'accent peut rester identique ou être ajusté */
-    --color-accent: #FFE600;
-    --color-accent-hover: #FFF033;
+    --color-accent: #9B59FF;
+    --color-accent-hover: #B07FFF;
   }
 }
 ```

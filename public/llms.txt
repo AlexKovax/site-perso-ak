@@ -22,7 +22,7 @@ Portfolio et site personnel d'Alexis Kovalenko (@alexkovax), présentant ses con
 
 **Couleurs** :
 - Background : cream (#FAFAFA)
-- Accent : yellow (#FFE600)
+- Accent : purple (#9B59FF)
 - Secondary : blue (#0066FF)
 - Text : dark (#1A1A1A)
 

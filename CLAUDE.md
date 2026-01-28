@@ -34,7 +34,7 @@ No test or lint scripts are configured.
 ### Styling System
 Uses CSS custom properties defined in `variables.css`:
 - Brutalist design aesthetic with thick borders (2-3px) and box shadows
-- Primary: cream background (#FAFAFA), yellow accent (#FFE600), blue secondary (#0066FF)
+- Primary: cream background (#FAFAFA), purple accent (#9B59FF), blue secondary (#0066FF)
 - Fonts: Space Grotesk (headings), Inter (body), JetBrains Mono (code)
 
 ### External Dependencies

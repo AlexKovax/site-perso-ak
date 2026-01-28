@@ -18,7 +18,8 @@ export function useSEO({ title, description } = {}) {
   useEffect(() => {
     const fullTitle = title ? `${title} | ${DEFAULT_TITLE}` : DEFAULT_TITLE
     const fullDescription = description || DEFAULT_DESCRIPTION
-    const canonicalUrl = `${BASE_URL}${location.pathname}`
+    const pathname = location.pathname.length > 1 ? location.pathname.replace(/\/+$/, '') : location.pathname
+    const canonicalUrl = `${BASE_URL}${pathname}`
 
     // Title
     document.title = fullTitle

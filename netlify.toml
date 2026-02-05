@@ -2,13 +2,14 @@
   command = "npm run build"
   publish = "dist"
 
-# Remove trailing slashes (except root)
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
+# Disable Pretty URLs to prevent automatic trailing slash redirects
+[build.processing]
+  skip_processing = false
 
-# SPA fallback
+[build.processing.html]
+  pretty_urls = false
+
+# SPA fallback - serve index.html for all routes (client-side routing)
 [[redirects]]
   from = "/*"
   to = "/index.html"

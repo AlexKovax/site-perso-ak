@@ -1,5 +1,11 @@
 export const conferences = [
   {
+    date: 'Décembre 2025',
+    event: 'normandie.ai',
+    title: 'De Warhol à Basquiat: Le vibe coding démocratise-t-il vraiment la création logicielle ?',
+    replay: 'https://youtu.be/Pbu-uvxlVks',
+  },
+  {
     date: 'Septembre 2025',
     event: 'Generative AI France',
     title: 'Vibe Coders vs Code Engineers : Qui écrit vraiment le futur du code ?',

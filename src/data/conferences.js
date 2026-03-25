@@ -1,5 +1,11 @@
 export const conferences = [
   {
+    date: 'Février 2026',
+    event: 'Touraine Tech',
+    title: 'Warhol à Basquiat (version courte)',
+    replay: 'https://youtu.be/pLWORiLWskY',
+  },
+  {
     date: 'Décembre 2025',
     event: 'normandie.ai',
     title: 'De Warhol à Basquiat: Le vibe coding démocratise-t-il vraiment la création logicielle ?',

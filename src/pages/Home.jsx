@@ -47,14 +47,19 @@ function Home() {
       <Section title="Livres" variant="alt" icon={IconBook}>
         <div className={styles.sectionContent}>
           <p className={styles.text}>
-            J'ai écrit deux livres sur le no-code. Le premier en 2023 avec Florian Reins et Erwan Kezzar chez Eyrolles. Le second en solo en 2025, un abécédaire personnel du mouvement no-code.
+            J'ai écrit trois livres. Le dernier en date : un essai sur le vibe coding paru au printemps 2026 aux Éditions Hosakkā Studio.
           </p>
           <div className={styles.booksGrid}>
+            <BookCard
+              title="Traité de vibe coding éclairé"
+              description="Comprendre la création d'applications par IA, mesurer l'opportunité, s'en saisir avec lucidité. ~200 pages, Éditions Hosakkā Studio."
+              link="https://livre.vibe-coding.tech/"
+              featured
+            />
             <BookCard
               title="L'abécédaire du mouvement no-code"
               description="26 lettres, 26 mots-clés pour comprendre le mouvement no-code à travers mon regard et mon expérience."
               link="https://abc.no-code.org/"
-              featured
             />
             <BookCard
               title="No-Code, une nouvelle génération d'outils numériques"

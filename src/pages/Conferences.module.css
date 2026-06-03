@@ -81,6 +81,12 @@
   margin-bottom: var(--space-6);
 }
 
+.talkActions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .inviteContent {
     flex-direction: column;

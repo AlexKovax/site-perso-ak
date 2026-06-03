@@ -32,12 +32,21 @@ function Conferences() {
               <p className={styles.talkText}>
                 Ma conférence la plus récente explore le parallèle entre l'émergence du vibe coding et le mouvement Pop Art des années 60. Comment l'IA démocratise la création de code, comme Warhol a démocratisé l'art. Une réflexion sur ce que signifie "créer" à l'ère de l'IA.
               </p>
-              <Button
-                href="https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit"
-                size="sm"
-              >
-                Voir les slides
-              </Button>
+              <div className={styles.talkActions}>
+                <Button
+                  href="https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit"
+                  size="sm"
+                >
+                  Voir les slides
+                </Button>
+                <Button
+                  href="https://livre.vibe-coding.tech/"
+                  size="sm"
+                  variant="secondary"
+                >
+                  Découvrir le livre
+                </Button>
+              </div>
             </Card.Body>
             <div className={styles.talkImageWrapper}>
               <img

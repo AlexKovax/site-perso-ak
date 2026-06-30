@@ -37,7 +37,7 @@ function Conferences() {
                   href="https://human-after-all.hosakka.studio/"
                   size="sm"
                 >
-                  Voir la conférence
+                  Voir les slides de la conférence
                 </Button>
               </div>
             </Card.Body>

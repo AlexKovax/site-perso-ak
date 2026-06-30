@@ -42,7 +42,7 @@ function ConferenceTable() {
                     rel="noopener noreferrer"
                     className={styles.replayLink}
                   >
-                    Voir les slides →
+                    Voir →
                   </a>
                 ) : (
                   <span className={styles.noReplay}>—</span>

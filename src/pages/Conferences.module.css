@@ -91,7 +91,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-6);
-  align-items: start;
+  align-items: stretch;
+}
+
+.bottomGrid > * {
+  height: 100%;
+}
+
+.inviteCard,
+.bookCard {
+  display: flex;
+  flex-direction: column;
 }
 
 .bookCard {

@@ -97,7 +97,7 @@ function Conferences() {
               </Card.Body>
               <div className={styles.bookImageWrapper}>
                 <img
-                  src="/livre.webp"
+                  src="/cover.png"
                   alt="Couverture du livre sur le vibe coding"
                   className={styles.bookImage}
                 />

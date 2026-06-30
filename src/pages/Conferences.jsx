@@ -28,30 +28,23 @@ function Conferences() {
         <Card className={styles.currentTalk}>
           <div className={styles.talkContent}>
             <Card.Body>
-              <h3 className={styles.talkTitle}>Vibe Coding et Pop Art</h3>
+              <h3 className={styles.talkTitle}>Human After All</h3>
               <p className={styles.talkText}>
-                Ma conférence la plus récente explore le parallèle entre l'émergence du vibe coding et le mouvement Pop Art des années 60. Comment l'IA démocratise la création de code, comme Warhol a démocratisé l'art. Une réflexion sur ce que signifie "créer" à l'ère de l'IA.
+                Ma conférence actuelle interroge notre rapport à la technologie à travers le prisme de l'album <em>Human After All</em> de Daft Punk. Que signifie rester humain à l'ère des algorithmes et de l'IA ? Une réflexion sur ce que la machine révèle de nous-mêmes.
               </p>
               <div className={styles.talkActions}>
                 <Button
-                  href="https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit"
+                  href="https://human-after-all.hosakka.studio/"
                   size="sm"
                 >
-                  Voir les slides
-                </Button>
-                <Button
-                  href="https://livre.vibe-coding.tech/"
-                  size="sm"
-                  variant="secondary"
-                >
-                  Découvrir le livre
+                  Voir la conférence
                 </Button>
               </div>
             </Card.Body>
             <div className={styles.talkImageWrapper}>
               <img
-                src="/slides.png"
-                alt="Slide de présentation : De Warhol à Basquiat"
+                src="/cover-human.png"
+                alt="Couverture de la conférence Human After All"
                 className={styles.talkImage}
               />
             </div>
@@ -67,28 +60,51 @@ function Conferences() {
         <ConferenceTable />
       </Section>
 
-      {/* Disponibilité */}
+      {/* Disponibilité + Livre */}
       <Section variant="alt">
-        <Card variant="highlight" className={styles.inviteCard}>
-          <div className={styles.inviteContent}>
-            <Card.Body>
-              <h2 className={styles.inviteTitle}>M'inviter</h2>
-              <p className={styles.inviteText}>
-                Je suis disponible pour intervenir dans vos événements, meetups ou conférences d'entreprise. Mes sujets de prédilection : le no-code, le vibe coding, la démocratisation de la création numérique.
-              </p>
-              <Button href="mailto:alex@hosakka.studio" variant="secondary">
-                Me contacter
-              </Button>
-            </Card.Body>
-            <div className={styles.inviteImageWrapper}>
-              <img
-                src="/invitation.jpg"
-                alt="Alexis Kovalenko sur scène au Web2Day"
-                className={styles.inviteImage}
-              />
+        <div className={styles.bottomGrid}>
+          <Card variant="highlight" className={styles.inviteCard}>
+            <div className={styles.inviteContent}>
+              <Card.Body>
+                <h2 className={styles.inviteTitle}>M'inviter</h2>
+                <p className={styles.inviteText}>
+                  Je suis disponible pour intervenir dans vos événements, meetups ou conférences d'entreprise. Mes sujets de prédilection : le no-code, le vibe coding, la démocratisation de la création numérique.
+                </p>
+                <Button href="mailto:alex@hosakka.studio" variant="secondary">
+                  Me contacter
+                </Button>
+              </Card.Body>
+              <div className={styles.inviteImageWrapper}>
+                <img
+                  src="/invitation.jpg"
+                  alt="Alexis Kovalenko sur scène au Web2Day"
+                  className={styles.inviteImage}
+                />
+              </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+
+          <Card className={styles.bookCard}>
+            <div className={styles.bookContent}>
+              <Card.Body>
+                <h2 className={styles.bookTitle}>Découvrir mon livre</h2>
+                <p className={styles.bookText}>
+                  J'ai écrit un livre sur le vibe coding : comment l'IA transforme la façon de créer des logiciels, et ce que ça change pour tout le monde.
+                </p>
+                <Button href="https://livre.vibe-coding.tech/" variant="secondary">
+                  Lire le livre
+                </Button>
+              </Card.Body>
+              <div className={styles.bookImageWrapper}>
+                <img
+                  src="/livre.webp"
+                  alt="Couverture du livre sur le vibe coding"
+                  className={styles.bookImage}
+                />
+              </div>
+            </div>
+          </Card>
+        </div>
       </Section>
     </>
   )

@@ -11,6 +11,7 @@ function ConferenceTable() {
             <th>Événement</th>
             <th>Titre</th>
             <th>Replay</th>
+            <th>Slides</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,20 @@ function ConferenceTable() {
                 {conf.replay ? (
                   <a
                     href={conf.replay}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.replayLink}
+                  >
+                    Voir →
+                  </a>
+                ) : (
+                  <span className={styles.noReplay}>—</span>
+                )}
+              </td>
+              <td>
+                {conf.slides ? (
+                  <a
+                    href={conf.slides}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.replayLink}

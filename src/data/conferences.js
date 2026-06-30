@@ -4,12 +4,14 @@ export const conferences = [
     event: 'Touraine Tech',
     title: 'Warhol à Basquiat (version courte)',
     replay: 'https://youtu.be/pLWORiLWskY',
+    slides: 'https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit',
   },
   {
     date: 'Décembre 2025',
     event: 'normandie.ai',
     title: 'De Warhol à Basquiat: Le vibe coding démocratise-t-il vraiment la création logicielle ?',
     replay: 'https://youtu.be/Pbu-uvxlVks',
+    slides: 'https://www.canva.com/design/DAG62ZhiEik/lx7PBXAssHMfc4EX_oVpnA/edit',
   },
   {
     date: 'Septembre 2025',

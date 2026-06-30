@@ -115,18 +115,17 @@
 
 .bookImageWrapper {
   flex-shrink: 0;
-  width: 160px;
+  width: 200px;
   margin: calc(-1 * var(--space-5));
   margin-left: 0;
-  display: flex;
-  align-items: center;
-  background: var(--color-bg-alt);
+  overflow: hidden;
 }
 
 .bookImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .bookTitle {
@@ -174,7 +173,7 @@
 
   .bookImageWrapper {
     width: 100%;
-    height: 160px;
+    height: 200px;
     margin: 0;
     margin-top: var(--space-4);
   }

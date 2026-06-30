@@ -89,7 +89,7 @@ function Conferences() {
               <Card.Body>
                 <h2 className={styles.bookTitle}>Découvrir mon livre</h2>
                 <p className={styles.bookText}>
-                  J'ai écrit un livre sur le vibe coding : comment l'IA transforme la façon de créer des logiciels, et ce que ça change pour tout le monde.
+                  J'ai écrit <em>Vibe Coding Éclairé</em>, un livre sur la façon dont l'IA transforme profondément la création logicielle. Ni manuel technique ni pamphlet alarmiste : une réflexion lucide sur ce que ça change pour les développeurs, les créateurs, et tous ceux qui font des choses avec du code.
                 </p>
                 <Button href="https://livre.vibe-coding.tech/" variant="secondary">
                   Lire le livre

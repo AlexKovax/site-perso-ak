@@ -24,7 +24,41 @@ function Conferences() {
       </Section>
 
       {/* Conférence actuelle */}
-      <Section title="Ma conférence actuelle" variant="alt">
+      <Section title="Mes conférences actuelles" variant="alt">
+        <div className={styles.talksList}>
+        <Card className={styles.currentTalk}>
+          <div className={styles.talkContent}>
+            <Card.Body>
+              <h3 className={styles.talkTitle}>De Warhol à Basquiat : Le vibe coding démocratise-t-il vraiment la création logicielle ?</h3>
+              <p className={styles.talkText}>
+                Le vibe coding ouvre la création logicielle à celles et ceux qui n'écrivaient pas de code hier. Mais démocratise-t-il vraiment la création, ou change-t-il simplement de mains ? Un parallèle avec l'art, de la Factory de Warhol à l'énergie brute de Basquiat, pour interroger ce que l'IA change réellement.
+              </p>
+              <div className={styles.talkActions}>
+                <Button
+                  href="https://canva.link/kqtpwxcxpzypdsy"
+                  size="sm"
+                >
+                  Voir les slides de la conférence
+                </Button>
+                <Button
+                  href="https://livre.vibe-coding.tech/"
+                  variant="secondary"
+                  size="sm"
+                >
+                  Découvrir le livre
+                </Button>
+              </div>
+            </Card.Body>
+            <div className={styles.talkImageWrapper}>
+              <img
+                src="/slides.png"
+                alt="Aperçu des slides de la conférence De Warhol à Basquiat"
+                className={styles.talkImage}
+              />
+            </div>
+          </div>
+        </Card>
+
         <Card className={styles.currentTalk}>
           <div className={styles.talkContent}>
             <Card.Body>
@@ -50,6 +84,7 @@ function Conferences() {
             </div>
           </div>
         </Card>
+        </div>
       </Section>
 
       {/* Historique */}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const API_URL = 'https://files.hosakka.studio/api/contenu.php'
+const API_URL = '/.netlify/functions/latest-content'
 
 export function useLatestContent() {
   const [data, setData] = useState(null)

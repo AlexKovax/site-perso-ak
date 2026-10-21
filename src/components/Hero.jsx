@@ -15,7 +15,7 @@ function Hero() {
         </div>
         <div className={styles.imageWrapper}>
           <img
-            src="/alex.jpg"
+            src="/alex.webp"
             alt="Alexis Kovalenko"
             className={styles.image}
           />

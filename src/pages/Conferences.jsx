@@ -111,7 +111,7 @@ function Conferences() {
               </Card.Body>
               <div className={styles.inviteImageWrapper}>
                 <img
-                  src="/invitation.jpg"
+                  src="/invitation.webp"
                   alt="Alexis Kovalenko sur scène au Web2Day"
                   className={styles.inviteImage}
                 />

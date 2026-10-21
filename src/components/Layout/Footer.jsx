@@ -1,9 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IconSlack, IconLinkedIn, IconMail } from '../icons'
 import styles from './Footer.module.css'
 
 function Footer() {
-  const currentYear = new Date().getFullYear()
+  const [currentYear] = useState(() => new Date().getFullYear())
 
   return (
     <footer className={styles.footer}>

@@ -15,8 +15,8 @@ function ConferenceTable() {
           </tr>
         </thead>
         <tbody>
-          {conferences.map((conf, index) => (
-            <tr key={index}>
+          {conferences.map((conf) => (
+            <tr key={`${conf.date}-${conf.event}`}>
               <td className={styles.date}>{conf.date}</td>
               <td className={styles.event}>{conf.event}</td>
               <td className={styles.title}>{conf.title}</td>
